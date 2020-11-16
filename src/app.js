@@ -23,7 +23,7 @@ app.get('' , (req , res ) => {
 
     res.render('index', {
         title: "Weather App",
-        name: "Farhan Qazi Student of Andrew mead"
+        name: "Farhan Qazi Web-App Developer"
     })
 })
 
@@ -40,7 +40,7 @@ app.get('/help', (req , res) => {
         res.render('help', {
             title:"Help page",
             helpTxt: "in this page you can take any type of help thanks",
-            name: 'Farhan Qazi student of andrew mead'
+            name: 'Farhan Qazi Web-App Developer'
         })
 
     })
