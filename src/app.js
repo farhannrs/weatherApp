@@ -1,10 +1,17 @@
 const path= require('path')
 const express = require('express')
 const hbs = require('hbs')
+
+
 const app = express()
+const port = process.env.port || 3000
+
+
 const geoCode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const request = require('postman-request');
+
+
 //Define path for express configuration 
 const publicDirectoryPath = path.join(__dirname ,  '../public')
 const partialsDirectoryPath = path.join(__dirname , '../templates/partials')
@@ -122,19 +129,6 @@ app.get('*' , (req , res) => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("server is on port 3000")
 })
