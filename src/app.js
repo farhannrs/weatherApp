@@ -69,15 +69,12 @@ app.get('/help', (req , res) => {
 
 
 
-    app.get('/weather', (req , res) => {
-
-       
+    app.get('/weather', (req , res) => {       
         if(!req.query.address ){
             return res.send({
                 error: 'please provide the address'
             })
         }
-
         else {
             geoCode.geoCode(req.query.address, (error , {longitude , latitude , location} = {} ) => {
         
